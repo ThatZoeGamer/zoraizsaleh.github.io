@@ -138,7 +138,7 @@
         
         /* Call to Action (CTA) Button - Mobile */
         .navbar__link--cta {
-            color: var(--color-primary);
+            color: var(--color-text);
             font-weight: var(--font-weight-bold);
         }
 
@@ -181,8 +181,6 @@
                 /* Adjusted styles for a horizontal layout */
                 padding: 0.5rem 1rem;
                 border-radius: 4px;
-                /* Add a subtle bottom border for a clean underline effect */
-                border-bottom: 2px solid transparent; 
             }
 
             /* The classic "border on hover" effect */
