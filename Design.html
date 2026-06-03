@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Design — Zoraiz Saleh</title>
+  <link rel="shortcut icon" href="icon.png">
+  <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <!-- NAVBAR (same as index.html) -->
+  <header class="navbar" role="banner">
+    <div class="navbar__container">
+      <a href="index.html" class="navbar__brand">Zoraiz Saleh</a>
+
+      <button class="navbar__toggle" id="navbarToggle" aria-label="Toggle navigation" aria-controls="navbarMenu" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <nav id="navbarMenu" class="navbar__menu" role="navigation">
+        <ul class="navbar__list">
+            <li class="navbar__item"><a href="Videoediting.html" class="navbar__link">Video Editing</a></li>
+            <li class="navbar__item"><a href="#" class="navbar__link">Programming</a></li>
+            <li class="navbar__item"><a href="photography.html" class="navbar__link">Photography</a></li>
+            <li class="navbar__item"><a href="#" class="navbar__link" style="color: var(--color-text)">Design</a></li>
+            <li class="navbar__item"><a href="#" class="navbar__link">AV</a></li>
+            <li class="navbar__item"><a href="Zoraiz_Saleh_Resume.pdf" class="navbar__link">Resume</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <br><br><br>
+  <section class="photo-hero">
+    <div class="photo-hero__inner">
+      <a href="index.html" class="photo-hero__back">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M10 3L5 8l5 5"/>
+        </svg>
+        Back to Home
+      </a>
+      <br>
+      <div class="photo-hero__eyebrow">Portfolio</div>
+      <h1 class="photo-hero__title">Design</h1>
+    </div>
+  </section>
+
+  <section class="gallery-section">
+    <div class="gallery-grid" id="galleryGrid">
+
+      <div class="gallery-item" data-title="Magazine Cover Design" data-tag="Graphic Design">
+        <div class="gallery-placeholder camera">
+          <img class="photo" src="Final Magazine Cover.png" alt="Magazine Cover Design">
+        </div>
+        <div class="gallery-item__overlay">
+          <div class="gallery-item__info">
+            <span class="gallery-item__title">Magazine Cover Design</span>
+            <span class="gallery-item__tag">Graphic Design</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-title="Youtube Thumbnail Design" data-tag="Graphic Design">
+        <div class="gallery-placeholder wide">
+          <img class="photo" src="The_Birthday_Surcharge.png" alt="Youtube Thumbnail Design">
+        </div>
+        <div class="gallery-item__overlay">
+          <div class="gallery-item__info">
+            <span class="gallery-item__title">Youtube Thumbnail Design</span>
+            <span class="gallery-item__tag">Graphic Design</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+    <button class="lightbox__close" id="lightboxClose" aria-label="Close">✕</button>
+    <img class="lightbox__img" id="lightboxImg" src="" alt="">
+    <div class="lightbox__caption">
+      <div class="lightbox__caption-title" id="lightboxTitle"></div>
+      <div class="lightbox__caption-tag" id="lightboxTag"></div>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+  <script src="photography.js"></script>
+</body>
+</html>

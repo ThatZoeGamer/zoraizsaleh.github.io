@@ -1,14 +1,3 @@
-   const navbarToggle = document.getElementById('navbarToggle');
-    const navbarMenu   = document.getElementById('navbarMenu');
-    if (navbarToggle && navbarMenu) {
-      navbarToggle.addEventListener('click', () => {
-        navbarToggle.classList.toggle('is-active');
-        navbarMenu.classList.toggle('is-active');
-        const expanded = navbarToggle.getAttribute('aria-expanded') === 'true';
-        navbarToggle.setAttribute('aria-expanded', !expanded);
-      });
-    }
-
     // ─── Staggered gallery entrance ─────────────────
     document.querySelectorAll('.gallery-item').forEach((item, i) => {
       item.style.animationDelay = `${0.05 * i + 0.2}s`;
