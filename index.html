@@ -1,60 +1,92 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Zoraiz Saleh - Portfolio</title>
-        <link rel="shortcut icon" href="icon.png">
-        <link rel="stylesheet" href="index.css">
-        <script href="index.js"></script>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-            <header class="navbar" role="banner">
-        <div class="navbar__container">
-            <a href="#" class="navbar__brand">Zoraiz Saleh</a>
-            
-            <button class="navbar__toggle" 
-                    id="navbarToggle" 
-                    aria-label="Toggle navigation" 
-                    aria-controls="navbarMenu" 
-                    aria-expanded="false">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-            
-            <nav id="navbarMenu" class="navbar__menu" role="navigation" aria-labelledby="navbarToggle">
-                <ul class="navbar__list">
-                    <li class="navbar__item"><a href="#" class="navbar__link">Video Editing</a></li>
-                    <li class="navbar__item"><a href="#" class="navbar__link">Programming</a></li>
-                    <li class="navbar__item"><a href="#" class="navbar__link">Photography</a></li>
-                    <li class="navbar__item"><a href="#" class="navbar__link">Design</a></li>
-                    <li class="navbar__item"><a href="#" class="navbar__link">AV</a></li>
-                    <li class="navbar__item"><a href="Zoraiz_Saleh_Resume.pdf" class="navbar__link">Resume</a></li>
-                </ul>
-            </nav>
-        </div>
+<html lang="en">
+  <head>
+    <title>Zoraiz Saleh — Portfolio</title>
+    <link rel="shortcut icon" href="icon.png">
+    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+
+    <header class="navbar" role="banner">
+      <div class="navbar__container">
+        <a href="#" class="navbar__brand">Zoraiz Saleh</a>
+
+        <button class="navbar__toggle"
+                id="navbarToggle"
+                aria-label="Toggle navigation"
+                aria-controls="navbarMenu"
+                aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+
+        <nav id="navbarMenu" class="navbar__menu" role="navigation">
+          <ul class="navbar__list">
+            <li class="navbar__item"><a href="#" class="navbar__link">Video Editing</a></li>
+            <li class="navbar__item"><a href="#" class="navbar__link">Programming</a></li>
+            <li class="navbar__item"><a href="photography.html" class="navbar__link">Photography</a></li>
+            <li class="navbar__item"><a href="#" class="navbar__link">Design</a></li>
+            <li class="navbar__item"><a href="#" class="navbar__link">AV</a></li>
+            <li class="navbar__item"><a href="Zoraiz_Saleh_Resume.pdf" class="navbar__link">Resume</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
-    <div class="aboutme">
-        <div class="container">
-            <img src="PFP copy.jpeg" class="mainphoto">
-            <div class="text-content">
-            <h1 class="first-text">Hey there fellow viewers.</h1>
-            <p class="paragraph-text">My name is Zoraiz Saleh, I am a teenage tech enthusiast. I have been exploring different aspects of Technology, like CAD Design in Onshape, Photography and photo editing in lightroom, and even video editing in Davinci Resolve. I have also tried to experience programming, like programming this entire website myself using HTML, CSS and Javascript.</p>
+
+    <section class="aboutme" id="about">
+      <div class="container">
+
+        <div class="photo-wrapper">
+          <img src="Profile.jpeg" class="mainphoto" alt="Zoraiz Saleh">
+        </div>
+
+        <div class="text-content">
+          <h1 class="first-text">Hey, I'm <span class="highlight">Zoraiz.</span></h1>
+          <p class="paragraph-text">
+            My name is Zoraiz Saleh, I am a high school student at Humberview Secondary School with a passion for technology. I've received over 160 hours of volunteer work as a field assistant for FIRST Robotics and FIRST Tech Challenge competitions, and as part of the A/V team at my school, I'm driven by curiosity, always picking up new tools and skills, and I thrive on solving problems that sit at the intersection of creativity and engineering.
+          </p>
+          <div class="skill-tags">
+            <span class="skill-tag"><span class="dot"></span>Video Editing</span>
+            <span class="skill-tag"><span class="dot"></span>Programming</span>
+            <span class="skill-tag"><span class="dot"></span>Photography</span>
+            <span class="skill-tag"><span class="dot"></span>Graphic Design</span>
+            <span class="skill-tag"><span class="dot"></span>AV Production</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="contactform" id="contact">
+      <div class="contact-container">
+        <h2 class="contact-heading">Reach Out!</h2>
+        <p class="contact-subtext">I don't mind whatsoever! 🙂</p>
+
+        <form class="contact-form" action="https://formsubmit.co/zoraiz.saleh@rogers.com" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="name">Name</label>
+              <input class="form-input" type="text" id="name" name="name" placeholder="Your name" required>
             </div>
-        </div>
-    </div>
-    <div class="contactform">
-        <div class="container">
-            <h1 class="contact-heading">Contact Me</h1>
-            <form action="https://formsubmit.co/zoraiz.saleh@rogers.com" method="POST">
-                <input type="email" name="email" placeholder="Email Address">
-                <input type="submit" value="Submit">
-                <input type="hidden" name="_subject" value="New Contact from website.">
-                <input type="hidden" name="_autoresponse" value="your custom message">
-                <input type="hidden" name="_next" value="index.html">
-            </form>
-        </div>
-    </div>
-    </body>
+            <div class="form-group">
+              <label class="form-label" for="email">Email</label>
+              <input class="form-input" type="email" id="email" name="email" placeholder="your@email.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="message">Message</label>
+            <textarea class="form-textarea" id="message" name="message" placeholder="What's on your mind?" required></textarea>
+          </div>
+          <input type="hidden" name="_subject" value="New message from portfolio">
+          <input type="hidden" name="_next" value="index.html">
+          <button type="submit" class="form-submit">Send Message →</button>
+        </form>
+      </div>
+    </section>
+
+    <script src="index.js"></script>
+  </body>
 </html>
