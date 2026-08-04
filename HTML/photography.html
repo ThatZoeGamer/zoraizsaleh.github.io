@@ -60,6 +60,8 @@
     <button class="filter-btn" data-filter="sports">Sports</button>
     <button class="filter-btn" data-filter="drone">Drone</button>
     <button class="filter-btn" data-filter="portrait">Portrait</button>
+    <button class="filter-btn" data-filter="technology">Technology</button>
+    <button class="filter-btn" data-filter="street">Street</button>
   </div>
 
   <section class="gallery-section">
@@ -125,14 +127,37 @@
         </div>
       </div>
 
-    </div><!-- /gallery-grid -->
+      <div class="gallery-item" data-category="technology" data-title="Macbook" data-tag="technology">
+        <div class="gallery-placeholder wide">
+          <img class="photo" src="../Photos/Photography/IMG_9774.jpg" alt="Macbook">
+        </div>
+        <div class="gallery-item__overlay">
+          <div class="gallery-item__info">
+            <span class="gallery-item__title">Macbook</span>
+            <span class="gallery-item__tag">Technology</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="street" data-title="event" data-tag="street">
+        <div class="gallery-placeholder wide">
+          <img class="photo" src="../Photos/Photography/IMG_9786.jpg" alt="event">
+        </div>
+        <div class="gallery-item__overlay">
+          <div class="gallery-item__info">
+            <span class="gallery-item__title">School Cafeteria Crowd</span>
+            <span class="gallery-item__tag">Street</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
 
     <div class="gallery-empty" id="galleryEmpty">
       <p>No photos in this category yet.</p>
     </div>
   </section>
 
-  <!-- LIGHTBOX -->
   <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
     <button class="lightbox__close" id="lightboxClose" aria-label="Close">✕</button>
     <img class="lightbox__img" id="lightboxImg" src="" alt="">
