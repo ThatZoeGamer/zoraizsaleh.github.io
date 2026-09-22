@@ -1,0 +1,56 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Build deployment artifact
+        run: |
+          set -euo pipefail
+
+          rm -rf _site
+          mkdir -p _site
+
+          # HTML currently lives in a subdirectory. Stage it at the site root
+          # and adjust its parent-relative references for the new location.
+          cp HTML/*.html _site/
+          find _site -type f -name '*.html' -exec sed -i \
+            -e 's#\.\./##g' \
+            -e '/<link rel="shortcut icon" href="icon.png">/d' {} +
+
+          cp index.css Zoraiz_Saleh_Resume.pdf CNAME _site/
+          cp -R Javascript Photos Videoediting _site/
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
